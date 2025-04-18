@@ -26,12 +26,11 @@ public class AddressBuilder {
                 .append(inputStringForAddress(scanner, "City: ")).append("\n")
                 .append(inputStringForAddress(scanner, "State: ")).append("\n")
                 .append(inputStringForAddress(scanner, "Zip: ")).append("\n").append("\n");
-
     }
 
     private String inputStringForAddress(Scanner scanner, String message) {
         System.out.print(message);
-        return message  + scanner.nextLine();
+        return message + scanner.nextLine();
     }
 
 }

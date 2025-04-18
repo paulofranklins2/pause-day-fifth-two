@@ -2,7 +2,7 @@ package com.pluralsight;
 
 import java.util.Scanner;
 
-import static com.pluralsight.MainScreen.*;
+import static com.pluralsight.MainScreen.runningMainScreenLogic;
 
 public class Main {
 

@@ -2,8 +2,8 @@ package com.pluralsight.calculator;
 
 import java.util.Scanner;
 
-import static com.pluralsight.reusable.ReusableCode.inputForDouble;
 import static com.pluralsight.reusable.ReusableCode.inputForChar;
+import static com.pluralsight.reusable.ReusableCode.inputForDouble;
 
 public class Calculator {
     private double firstInput;
