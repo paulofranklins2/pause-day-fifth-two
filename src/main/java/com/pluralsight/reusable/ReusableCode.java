@@ -22,4 +22,9 @@ public class ReusableCode {
         System.out.print(message);
         return scanner.nextLine().trim();
     }
+
+    public static String inputForString(Scanner scanner, String message) {
+        System.out.print(message);
+        return scanner.nextLine();
+    }
 }
