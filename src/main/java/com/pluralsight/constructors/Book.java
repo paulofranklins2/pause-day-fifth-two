@@ -9,7 +9,19 @@ public class Book {
         System.out.println("this book is : " + title + " by author: " + author + " pageCount: " + pageCount);
     }
 
-    Book(String title, String author, int pageCount) {
+    public String getTitle() {
+        return title;
+    }
+
+    public String getAuthor() {
+        return author;
+    }
+
+    public int getPageCount() {
+        return pageCount;
+    }
+
+    public Book(String title, String author, int pageCount) {
         this.title = title;
         this.author = author;
         this.pageCount = pageCount;
