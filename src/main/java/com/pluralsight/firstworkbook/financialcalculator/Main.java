@@ -2,7 +2,7 @@ package com.pluralsight.firstworkbook.financialcalculator;
 
 import java.util.Scanner;
 
-import static com.paulofranklins.PrintScreens.runningMainScreen;
+import static com.pluralsight.firstworkbook.financialcalculator.PrintScreens.runningMainScreen;
 
 public class Main {
     public static void main(String[] args) {
