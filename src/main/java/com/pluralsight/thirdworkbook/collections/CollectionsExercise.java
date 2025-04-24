@@ -30,15 +30,6 @@ public class CollectionsExercise {
     private static ArrayList<Integer> favoriteNumber = new ArrayList<>();
     private static ArrayList<Book> favoriteBook = new ArrayList<>();
 
-    // Returns the list of favorite numbers
-    public static ArrayList<Integer> getFavoriteNumber() {
-        return favoriteNumber;
-    }
-
-    // Returns the list of favorite artists
-    public static ArrayList<String> getArtistList() {
-        return artistList;
-    }
 
     // Generic method that returns the same list passed as argument
     public static <T> ArrayList<T> getList(ArrayList<T> list) {
@@ -87,6 +78,7 @@ public class CollectionsExercise {
         // Create a list of your favorite artists (or book or animals) - type String
         // Add 3 items to it
         var artist = getList(artistList);
+        var number = getList(favoriteNumber);
         addItemToList(artist, "Samantha");
         addItemToList(artist, "Ryan");
         addItemToList(artist, "Wilmer");
@@ -95,42 +87,42 @@ public class CollectionsExercise {
         // Print all of them with a loop
         System.out.println("Artist List:");
         System.out.println("Before Removing");
-        printList(getArtistList());
+        printList(getList(artistList));
 
         // Remove your least favorite
-        removeItemFromList(getArtistList(), "You Know Who");
+        removeItemFromList(getList(artist), "You Know Who");
 
         // Print all of them with a loop
         System.out.println();
         System.out.println("After Removing");
-        printList(getArtistList());
+        printList(getList(artistList));
 
         System.out.println();
 
         // Create a list of your favorite numbers - type Integer
         // Add your favorite numbers
-        addItemToList(getFavoriteNumber(), 5);
-        addItemToList(getFavoriteNumber(), 5);
-        addItemToList(getFavoriteNumber(), 5);
-        addItemToList(getFavoriteNumber(), 5);
-        addItemToList(getFavoriteNumber(), 4);
+        addItemToList(getList(number), 5);
+        addItemToList(number,5);
+        addItemToList(number, 5);
+        addItemToList(number, 5);
+        addItemToList(number, 4);
 
         // Print all of them with a loop
         System.out.println("Favorite Number List:");
         System.out.println("Before Removing");
-        printList(getFavoriteNumber());
+        printList(getList(number));
 
         // Remove your least favorite
-        removeItemFromList(getFavoriteNumber(), 4);
+        removeItemFromList(number, 4);
 
         // Print all of them with a loop
         System.out.println();
         System.out.println("After Removing");
-        printList(getFavoriteNumber());
+        printList(getList(number));
 
         // Sum all the numbers and print the total
         System.out.println("Sum:");
-        sumNumbersInList(getFavoriteNumber());
+        sumNumbersInList(number);
 
         System.out.println();
 
