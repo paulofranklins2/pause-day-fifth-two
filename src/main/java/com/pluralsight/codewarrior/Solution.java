@@ -8,4 +8,8 @@ class Solution {
             return 2 * (l + w);
         }
     }
+
+    public static void main(String[] args) {
+        System.out.println("Hello World!");
+    }
 }
