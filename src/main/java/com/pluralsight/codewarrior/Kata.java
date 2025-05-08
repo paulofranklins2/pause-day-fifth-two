@@ -1,7 +1,9 @@
 package com.pluralsight.codewarrior;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class Kata {
 
@@ -66,6 +68,35 @@ public class Kata {
         }
         return sb.toString();
     }
+
+    public static boolean validPhoneNumber(String phoneNumber) {
+        return phoneNumber.matches("^\\(\\d{3}\\) \\d{3}-\\d{4}$");
+    }
+
+    public static int mostFrequentItemCount(int[] collection) {
+        if (collection.length == 0) return 0;
+
+        Map<Integer, Integer> freqMap = new HashMap<>();
+        int maxCount = 0;
+
+        for (int num : collection) {
+            int count = freqMap.getOrDefault(num, 0) + 1;
+            freqMap.put(num, count);
+            maxCount = Math.max(maxCount, count);
+        }
+
+        return maxCount;
+    }
+
+    public static boolean betterThanAverage(int[] classPoints, int yourPoints) {
+        int sum = 0;
+        for (int score : classPoints) {
+            sum += score;
+        }
+        double average = (double) sum / classPoints.length;
+        return yourPoints > average;
+    }
+
 
 }
 
