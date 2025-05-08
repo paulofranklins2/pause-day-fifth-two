@@ -13,4 +13,21 @@ public class Sum {
         return result;
     }
 
+    public int GetSum(int a, int b) {
+        int min = Math.min(a, b);
+        int max = Math.max(a, b);
+        int result = 0;
+        System.out.println(min + " " + max);
+
+        for (int i = min; i <= max; i++) {
+            result += i;
+        }
+        return result;
+    }
+
+    public static void main(String[] args) {
+        var s = new Sum();
+        System.out.println(s.GetSum(0, -1));
+    }
 }
+
