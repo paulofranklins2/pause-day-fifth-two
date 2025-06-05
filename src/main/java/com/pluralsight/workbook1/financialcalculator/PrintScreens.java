@@ -4,6 +4,7 @@ import com.pluralsight.workbook1.financialcalculator.Calculator.*;
 
 import java.util.Scanner;
 
+import static com.pluralsight.workbook1.financialcalculator.Calculator.*;
 import static com.pluralsight.workbook1.financialcalculator.UserInput.getUserInput;
 
 public class PrintScreens {
