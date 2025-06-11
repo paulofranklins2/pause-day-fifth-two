@@ -37,8 +37,6 @@ public class Main {
 
         } catch (SQLException e) {
             System.err.println("A database error occurred: " + e.getMessage());
-        } catch (IllegalArgumentException e) {
-            System.err.println("Invalid input: " + e.getMessage());
         }
     }
 }
