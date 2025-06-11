@@ -17,21 +17,26 @@ public class ActorDao implements ActorRepository {
         this.connection = connection;
     }
 
+    @Override
     public List<Actor> findAllByLastName(String lastName) {
         List<Actor> actors = new ArrayList<>();
-        String sql = "SELECT * FROM actor WHERE last_name LIKE ?";
+        String sql = "SELECT actor_id, first_name, last_name FROM actor WHERE last_name LIKE ?";
+
         try (PreparedStatement ps = connection.prepareStatement(sql)) {
             ps.setString(1, "%" + lastName + "%");
+
             try (ResultSet rs = ps.executeQuery()) {
                 while (rs.next()) {
-                    actors.add(new Actor(rs.getInt("actor_id"), rs.getString("first_name"), rs.getString("last_name")));
+                    actors.add(new Actor(
+                            rs.getInt("actor_id"),
+                            rs.getString("first_name"),
+                            rs.getString("last_name")
+                    ));
                 }
             }
         } catch (SQLException e) {
-            System.out.println("Error retrieving actor's by last name: " + lastName);
+            System.err.println("Error retrieving actors by last name: " + lastName);
         }
         return actors;
     }
-
-
 }

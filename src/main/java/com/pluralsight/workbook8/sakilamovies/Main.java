@@ -3,7 +3,6 @@ package com.pluralsight.workbook8.sakilamovies;
 import com.pluralsight.workbook8.sakilamovies.config.DataManager;
 import com.pluralsight.workbook8.sakilamovies.dao.ActorDao;
 import com.pluralsight.workbook8.sakilamovies.dao.FilmDao;
-import com.pluralsight.workbook8.sakilamovies.repository.ActorRepository;
 import com.pluralsight.workbook8.sakilamovies.service.ActorService;
 import com.pluralsight.workbook8.sakilamovies.service.FilmService;
 
@@ -14,6 +13,10 @@ import static com.pluralsight.workbook8.sakilamovies.util.InputHelper.stringInpu
 
 public class Main {
     public static void main(String[] args) {
+        init(args);
+    }
+
+    public static void init(String[] args) {
         try {
             DataManager dataManager = new DataManager();
             dataManager.checkStringArgs(args);

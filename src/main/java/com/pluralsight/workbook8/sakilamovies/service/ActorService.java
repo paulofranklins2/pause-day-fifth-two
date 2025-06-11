@@ -10,8 +10,9 @@ public class ActorService {
     }
 
     public void printActorsByLastName(String lastName) {
-        actorRepository.findAllByLastName(lastName).forEach(actor ->
-                System.out.printf("First Name: %s | Last Name: %s%n", actor.getFirstName(), actor.getLastName()));
+        actorRepository.findAllByLastName(lastName)
+                .forEach(actor -> System.out.printf(
+                        "First Name: %s | Last Name: %s%n",
+                        actor.getFirstName(), actor.getLastName()));
     }
 }
-

@@ -12,8 +12,9 @@ public class FilmService {
     }
 
     public void printMoviesByActorName(String firstName, String lastName) throws SQLException {
-        filmRepository.findAllFilmsByFirstAndLastName(firstName, lastName).forEach(film ->
-                System.out.printf("ID: %d | Title: %s | Year: %d | Length: %d | Description: %s%n",
+        filmRepository.findAllFilmsByFirstAndLastName(firstName, lastName)
+                .forEach(film -> System.out.printf(
+                        "ID: %d | Title: %s | Year: %d | Length: %d | Description: %s%n",
                         film.getFilmId(), film.getTitle(), film.getYear(), film.getLength(), film.getDescription()));
     }
 }
