@@ -1,4 +1,4 @@
-package com.pluralsight.workbook8;
+package com.pluralsight.workbook8.tuesday;
 
 import java.sql.*;
 
